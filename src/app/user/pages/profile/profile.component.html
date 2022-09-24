@@ -1,0 +1,26 @@
+<h2>Profile Page</h2>
+
+<form class="form-container" (ngSubmit)="submitProfile()">
+
+    <div class="form-group">
+        <label for="email"></label>
+        <input type="text" id="email" name="email" placeholder="Email" class="" required>
+    </div><br>
+    <div class="form-group">
+        <label for="name"></label>
+        <input type="text" id="name" name="name" placeholder="Name">
+    </div><br>
+    <div class="form-group">
+        <label for="bio"></label>
+        <input type="text" id="bio" name="bio" placeholder="Bio">
+    </div><br>
+
+    <div class="form-group">
+        <button type="radio" id="active" name="active" value="Active">Active</button>
+        <button type="radio" id="active" name="active" value="Inactive">Inactive</button>
+    </div><br>
+       
+    <button>Submit</button>
+</form>
+
+

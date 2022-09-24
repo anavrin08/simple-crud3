@@ -1,0 +1,12 @@
+<h3>Blog item:</h3>
+
+<div>
+    ID: {{blogsArray?.id}},
+    Title: {{blogsArray?.title}},
+    Description: {{blogsArray?.description}},
+    Author: {{blogsArray?.author}},
+    Comment/s: {{blogsArray?.comments}}
+
+    <button (click)="sendBlogIDandEdit()">Edit</button>
+    <button (click)="sendBlogIDandDelete()">Delete</button>
+</div>
