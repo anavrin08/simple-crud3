@@ -1,8 +1,8 @@
-<h2>Book List:</h2>
+<div class="header">Book List</div>
 
-<div *ngFor="let books of booksArray">
-    <app-book-item [booksArray]="books" 
-        (BookIDEditEmitter)="editBook($event)"
-        (BookIDDeleteEmitter)="deleteBook($event)">
-    </app-book-item>
+<div class="item" *ngFor="let books of booksArray">
+  <app-book-item [booksArray]="books" 
+    (BookIDEditEmitter)="editBook($event)" 
+    (BookIDDeleteEmitter)="deleteBook($event)">
+  </app-book-item>
 </div>

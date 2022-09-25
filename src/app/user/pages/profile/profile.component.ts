@@ -8,21 +8,19 @@ import { User } from '../../models/user';
 })
 export class ProfileComponent implements OnInit {
 
-  profile: User[] = [
-    {
+  profile: User = {
       email: '',
       name: '',
       bio: '',
       active: ''
-    }
-  ];
+  }
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  submitProfile(){
+  submitProfile() {
     console.log(this.profile);
   }
 

@@ -12,19 +12,18 @@ export class BookListComponent implements OnInit {
 
   booksArray?:Book[] = [];
   
-  constructor(private bookService:BookService) { 
+  constructor(private bookService:BookService) { }
+
+  ngOnInit(): void {
     this.booksArray = this.bookService.displayBook();
   }
 
-  ngOnInit(): void {
-  }
-
   editBook(id:number){
-    console.log("edit: "+ id);
+    alert(`Edit: ${id}`);
   }
 
   deleteBook(id:number){
-    console.log("delete: "+ id);
+    alert(`Delete: ${id}`);
   }
 
 

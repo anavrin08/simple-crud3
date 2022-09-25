@@ -12,19 +12,18 @@ export class BlogListComponent implements OnInit {
 
   blogsArray?: Blog[] = [];
 
-  constructor(private blogService:BlogService) { 
+  constructor(private blogService:BlogService) { }
+
+  ngOnInit(): void {
     this.blogsArray = this.blogService.displayBlogs();
   }
 
-  ngOnInit(): void {
-  }
-
   editBlog(id:number){
-    console.log("edit: "+ id);
+    alert(`Edit: ${id}`);
   }
 
   deleteBlog(id:number){
-    console.log("delete: "+ id);
+    alert(`Delete: ${id}`);
   }
 
 

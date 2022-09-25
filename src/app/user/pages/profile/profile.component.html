@@ -1,25 +1,28 @@
-<h2>Profile Page</h2>
+<div class="header">Profile Page</div>
 
-<form class="form-container" (ngSubmit)="submitProfile()">
-    <div class="form-group">
+<div class="center">
+<form #userForm="ngForm" (ngSubmit)="submitProfile()">
+    <div  class="form-group">
         <label for="email"></label>
-        <input type="text" id="email" name="email" placeholder="Email" class="" required>
-    </div><br>
+        <input [(ngModel)]="profile.email" type="text" id="email"  name="email" placeholder="Email" class="form-control" required email>
+    </div>
     <div class="form-group">
         <label for="name"></label>
-        <input type="text" id="name" name="name" placeholder="Name">
-    </div><br>
+        <input [(ngModel)]="profile.name"  type="text" id="name" name="name" placeholder="Name" class="form-control" required>
+    </div>
     <div class="form-group">
         <label for="bio"></label>
-        <input type="text" id="bio" name="bio" placeholder="Bio">
-    </div><br>
-
+        <textarea [(ngModel)]="profile.bio"  rows="4" cols="50" id="bio" name="bio" placeholder="Bio" class="form-control"></textarea>
+    </div>
     <div class="form-group">
-        <button type="radio" id="active" name="active" value="Active">Active</button>
-        <button type="radio" id="active" name="active" value="Inactive">Inactive</button>
-    </div><br>
-       
-    <button>Submit</button>
+        <label for="active"></label>
+        <input [(ngModel)]="profile.active" type="text" id="active" name="active" placeholder="Active" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <button type="submit" [disabled]="userForm.invalid" class="btn">Submit</button>
+    </div>
+    <div [hidden]="userForm.valid" class="alert alert-danger">
+        Please fill in required fields.
+    </div>
 </form>
-
-
+</div>

@@ -1,12 +1,12 @@
-<h3>Blog item:</h3>
-
-<div>
-    ID: {{blogsArray?.id}},
-    Title: {{blogsArray?.title}},
-    Description: {{blogsArray?.description}},
-    Author: {{blogsArray?.author}},
+<div class="container">
+    <b>Blog item:</b>
+    <div class="array">
+    ID: {{blogsArray?.id}}<br>
+    Title: {{blogsArray?.title}}<br>
+    Description: {{blogsArray?.description}}<br>
+    Author: {{blogsArray?.author}}<br>
     Comment/s: {{blogsArray?.comments}}
-
-    <button (click)="sendBlogIDandEdit()">Edit</button>
-    <button (click)="sendBlogIDandDelete()">Delete</button>
+    </div>
+    <button class="btn" (click)="sendBlogIDandEdit()">Edit</button>
+    <button class="btn" (click)="sendBlogIDandDelete()">Delete</button>
 </div>

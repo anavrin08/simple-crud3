@@ -6,10 +6,6 @@ import { BookListComponent } from './book/pages/book-list/book-list.component';
 import { ProfileComponent } from './user/pages/profile/profile.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: AppComponent
-  },
 
   {
     path: 'book',

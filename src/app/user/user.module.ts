@@ -4,8 +4,6 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { FormComponent } from './components/form/form.component';
 import { FormsModule } from '@angular/forms';
 
-import { MatFormFieldModule } from '@angular/material/form-field';
-
 @NgModule({
   declarations: [
     ProfileComponent,
@@ -13,8 +11,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
   ],
   imports: [
     CommonModule,
-    FormsModule,
-    MatFormFieldModule
+    FormsModule
   ],
   bootstrap: [ProfileComponent]
 })

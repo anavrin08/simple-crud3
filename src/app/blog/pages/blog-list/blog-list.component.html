@@ -1,8 +1,6 @@
-<h2>Blog List:</h2>
-
-<div *ngFor="let blogs of blogsArray">
-    <app-blog-item [blogsArray]="blogs"
+<div class="header">Blog List</div>
+<div class="item" *ngFor="let blogs of blogsArray">
+    <app-blog-item [blogsArray]="blogs" 
         (BlogIDEditEmitter)="editBlog($event)"
-        (BlogIDDeleteEmitter)="deleteBlog($event)"
-    ></app-blog-item>
+        (BlogIDDeleteEmitter)="deleteBlog($event)"></app-blog-item>
 </div>
