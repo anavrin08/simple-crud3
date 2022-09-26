@@ -12,9 +12,10 @@ export class ProfileComponent implements OnInit {
       email: '',
       name: '',
       bio: '',
-      active: ''
+      active: false
   }
 
+  
   constructor() { }
 
   ngOnInit(): void {
