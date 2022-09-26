@@ -2,6 +2,9 @@
 
 <div class="center">
     <form #userForm="ngForm" (ngSubmit)="submitProfile()">
+        <div *ngIf="userForm.invalid" class="alert alert-danger">
+            Please fill in required fields.
+        </div>
         <div class="form-group">
             <label for="email"></label>
             <input [(ngModel)]="profile.email" type="text" id="email" name="email" placeholder="Email"
@@ -30,8 +33,6 @@
         <div class="form-group">
             <button type="submit" [disabled]="userForm.invalid" class="btn">Submit</button>
         </div>
-        <div *ngIf="userForm.invalid" class="alert alert-danger">
-            Please fill in required fields.
-        </div>
+
     </form>
 </div>
