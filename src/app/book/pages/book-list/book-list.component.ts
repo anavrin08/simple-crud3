@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Book } from '../../models/book';
 import { BookService } from '../../services/book.service';
 
@@ -10,9 +11,10 @@ import { BookService } from '../../services/book.service';
 })
 export class BookListComponent implements OnInit {
 
+  
   booksArray?:Book[] = [];
   
-  constructor(private bookService:BookService) { }
+  constructor(private bookService:BookService, private router:Router) { }
 
   ngOnInit(): void {
     this.booksArray = this.bookService.displayBook();
@@ -20,11 +22,13 @@ export class BookListComponent implements OnInit {
 
   editBook(id:number){
     alert(`Edit: ${id}`);
+    this.router.navigate(['book/form'])
   }
 
   deleteBook(id:number){
     alert(`Delete: ${id}`);
   }
+
 
 
 }

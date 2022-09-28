@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Blog } from '../../models/blog';
 import { BlogService } from '../../services/blog.service';
 
@@ -12,7 +13,7 @@ export class BlogListComponent implements OnInit {
 
   blogsArray?: Blog[] = [];
 
-  constructor(private blogService:BlogService) { }
+  constructor(private blogService:BlogService, private router:Router) { }
 
   ngOnInit(): void {
     this.blogsArray = this.blogService.displayBlogs();
@@ -20,6 +21,7 @@ export class BlogListComponent implements OnInit {
 
   editBlog(id:number){
     alert(`Edit: ${id}`);
+    this.router.navigate(['book/form'])
   }
 
   deleteBlog(id:number){

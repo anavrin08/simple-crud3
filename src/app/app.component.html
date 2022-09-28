@@ -1,12 +1,4 @@
-<header>
-<h1><b>{{title}}</b></h1>
-</header>
-
-<div class="btn-group btn-group-md">
-    <button class="btn" routerLink="/">Home</button>
-    <button class="btn" routerLink="/book">To Book</button>
-    <button class="btn" routerLink="/blog">To Blog</button>
-    <button class="btn" routerLink="/profile">To User</button>
-</div>
-<div>grabe, hirap mag clone!</div>
+<app-header></app-header>
 <router-outlet></router-outlet>
+<app-command-bar *ngIf="getRoute() == '/book' || getRoute() == '/blog'"></app-command-bar>
+

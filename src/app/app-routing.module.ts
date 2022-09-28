@@ -1,11 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
 import { BlogListComponent } from './blog/pages/blog-list/blog-list.component';
 import { BookListComponent } from './book/pages/book-list/book-list.component';
+import { BlogFormComponent } from './modules/blog/pages/blog-form/blog-form.component';
+import { BookFormComponent } from './modules/book/pages/book-form/book-form.component';
 import { ProfileComponent } from './user/pages/profile/profile.component';
 
 const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'blog',
+    pathMatch: 'full'
+  },
 
   {
     path: 'book',
@@ -23,7 +29,17 @@ const routes: Routes = [
     path: 'profile',
     component: ProfileComponent,
     loadChildren: () => import('./user/user.module').then(m =>m.UserModule)
-  }
+  },
+
+  {
+    path: 'book/form',
+    component: BookFormComponent
+  },
+
+  {
+    path: 'blog/form',
+    component: BlogFormComponent
+  },
 
 ];
 
